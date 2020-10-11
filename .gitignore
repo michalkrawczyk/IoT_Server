@@ -3,3 +3,4 @@ Server/migrations
 venv
 db.sqlite3
 .idea
+IoT_Server/settings.py
