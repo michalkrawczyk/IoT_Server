@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import (
     CategoryDetailAPI, CategoryListAPI,
-    ControllerUpdateAPI, ControllerDetailAPI, ControllerListAPI,
+    ControllerAuthUpdate, ControllerUpdateAPI, ControllerDetailAPI, ControllerListAPI,
     DeviceChangeControllerAPI, DeviceDetailAPI, DeviceListAPI, DeviceUpdateStateAPI,
     ErrorCreateAPI, ErrorDetailAPI, ErrorListAPI, ErrorUpdateAPI,
     InputDetailAPI, InputListAPI,
@@ -17,6 +17,7 @@ urlpatterns = [
     path('category=<pk>/detail', CategoryDetailAPI.as_view(), name="Category Details"),
     path('categories', CategoryListAPI.as_view(), name='Available Categories'),
 
+    path('controller=<pk>/auth_change', ControllerAuthUpdate.as_view(), name='Controller Authorization'),
     path('controller=<pk>/update', ControllerUpdateAPI.as_view(), name='Controller Update'),
     path('controller=<pk>/detail', ControllerDetailAPI.as_view(), name='Controller Details'),
     path('controllers/', ControllerListAPI.as_view(), name='Available Controllers'),
