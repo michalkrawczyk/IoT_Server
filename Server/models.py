@@ -3,7 +3,7 @@ from django.dispatch import receiver
 from django.db.models.signals import post_save
 from model_utils import Choices
 from datetime import timedelta
-from Server.model_utils.CustomModels import generate_random_string
+from Server.model_utils.CustomMethods import generate_random_string
 
 
 class Controller(models.Model):
